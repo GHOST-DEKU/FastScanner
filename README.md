@@ -2,116 +2,148 @@
 
 # `FastScanner.java`
 
-### High-Performance Input Reader for Competitive Programming
+### 🚀 High-Performance Input Reader for Competitive Programming
 
-![Java](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)
-![IO](https://img.shields.io/badge/IO-BufferedReader-blue?style=for-the-badge)
-![Speed](https://img.shields.io/badge/Performance-High-green?style=for-the-badge)
+[![Java](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)](https://java.com)
+[![IO](https://img.shields.io/badge/IO-BufferedReader-blue?style=for-the-badge)](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+<br/>
+
+**Stop getting TLE on Java I/O.**<br/>
+_A minimal, robust wrapper around `BufferedReader` & `StringTokenizer`._
+
+[Installation](#-installation) • [Usage](#-usage-example) • [Benchmarks](#-performance-note)
 
 </div>
 
 ---
 
-## 📝 Description
+## ⚡ What is it?
 
-**FastScanner** is a standalone Java utility designed to bypass the slowness of `java.util.Scanner`. It wraps `BufferedReader` and `StringTokenizer` into a simple, robust API for handling large inputs in competitive programming environments (Codeforces, LeetCode, AtCoder).
+**FastScanner** is a standalone Java utility designed to bypass the slowness of `java.util.Scanner`. It provides a simple API for handling large input streams in competitive programming environments like **Codeforces**, **LeetCode**, and **AtCoder**, supporting **10^6+ integers/sec**.
 
-## 💻 Class Structure
+## 💻 API Reference
 
 ```java
 public class FastScanner {
 
-    /* --- Constructors --- */
-    public FastScanner();                  // Reads from System.in
-    public FastScanner(InputStream is);    // Custom InputStream
-    public FastScanner(String fileName);   // Reads from File
+    // --- Constructors ---
+    public FastScanner();                  // System.in (Standard Input)
+    public FastScanner(InputStream is);    // Custom Stream
+    public FastScanner(String fileName);   // File Reading
 
-    /* --- Core Methods --- */
-    boolean hasNext();          // Checks for EOF / more tokens
-    String  next();             // Reads next token
-    String  nextLine();         // Reads remainder of line
+    // --- Core Checks ---
+    boolean hasNext();          // Safe EOF check
+    String  next();             // Get next token
+    String  nextLine();         // Get rest of line
 
-    /* --- Primitives --- */
-    int     nextInt();          // Parses int
-    long    nextLong();         // Parses long
-    double  nextDouble();       // Parses double
-    char    nextChar();         // Reads first char of token
+    // --- Primitive Parsers ---
+    int     nextInt();          // Integer
+    long    nextLong();         // Long
+    double  nextDouble();       // Double
+    char    nextChar();         // Character
 
-    /* --- Array Helpers (One-Liners) --- */
-    int[]    readIntArray(int n);
-    long[]   readLongArray(int n);
-    double[] readDoubleArray(int n);
+    // --- Array One-Liners ---
+    int[]    readIntArray(int n);      // Read n integers
+    long[]   readLongArray(int n);     // Read n longs
+    double[] readDoubleArray(int n);   // Read n doubles
 }
 ```
-
-## 🚀 Usage Example
-
-### Option 1: As a Library (Recommended)
-
-1. Clone/Download this repo into a folder named `FastScanner` inside your project.
-2. Import it in your code:
-
-```java
-import FastScanner.FastScanner; // Import the class
-import java.io.*;
-import java.util.*;
-
-public class Solution {
-    public static void main(String[] args) {
-        // Initialize
-        FastScanner fs = new FastScanner();
-
-        // Read Input
-        int n = fs.nextInt();
-        int[] a = fs.readIntArray(n); // One-line array input!
-
-        Arrays.sort(a);
-        System.out.println(Arrays.toString(a));
-    }
-}
-```
-
-### Option 2: Single File
-
-If you paste the code directly into your solution file or same directory without the folder, remove the `package FastScanner;` line from the top of `FastScanner.java`.
 
 ## 📦 Installation
 
-### Option 3: One-Click Installation (App-like)
+<details open>
+<summary><b>Option 1: One-Click Installation (Recommended)</b></summary>
+<br>
 
-Automatically installs to `~/JavaLibs` and configures your system environment.
+<div align="center">
+<table>
+<tr>
+<td align="center"><b>Windows</b></td>
+<td align="center"><b>Linux / macOS</b></td>
+</tr>
+<tr>
+<td>
 
-**Windows:**
+1. Download [`install.ps1`](install.ps1).
+2. Right-click → **Run with PowerShell**.
 
-1. Download `install.ps1`.
-2. Right-click -> **Run with PowerShell** OR run:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File install.ps1
-   ```
+</td>
+<td>
 
-**Linux / macOS:**
-
-1. Download `install.sh`.
+1. Download [`install.sh`](install.sh).
 2. Run:
    ```bash
    chmod +x install.sh
    ./install.sh
    ```
 
-### Option 4: Manual Global Installation
+</td>
+</tr>
+</table>
+</div>
 
-If you prefer doing it yourself:
+_Automatically installs to `~/JavaLibs` and configures your CLASSPATH._
 
-1. **Create** a folder `C:\JavaLibs` (or `~/JavaLibs`).
-2. **Copy** the `FastScanner` folder from this repo into it.
-3. **Add** that folder to your `CLASSPATH` environment variable.
+</details>
+
+<details>
+<summary><b>Option 2: Import as Library (Manual)</b></summary>
+<br>
+
+1. Clone this repo into a folder named `FastScanner`.
+2. Import it anywhere in your project:
+   ```java
+   import FastScanner.FastScanner;
+   ```
+   </details>
+
+<details>
+<summary><b>Option 3: Single File (Copy-Paste)</b></summary>
+<br>
+
+Just copy the content of `FastScanner.java` directly into your solution file.
+
+> **Note:** Remove the `package FastScanner;` line from the top if you do this.
+
+</details>
+
+<br>
+
+## 🚀 Usage Example
+
+```java
+import FastScanner.FastScanner; // Package import
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        FastScanner fs = new FastScanner();
+
+        // 1. Safe EOF Handling
+        if (!fs.hasNext()) return;
+
+        // 2. Super Fast Array Input
+        int n = fs.nextInt();
+        int[] a = fs.readIntArray(n);
+
+        // 3. Logic
+        Arrays.sort(a);
+
+        // 4. Output
+        System.out.println(Arrays.toString(a));
+    }
+}
+```
 
 ## ⚡ Performance Note
 
-> Uses `BufferedReader` with default buffer size (8KB), which is ~20x faster than `Scanner` for large datasets.
+> **FastScanner** uses an internal 8KB buffer via `BufferedReader`, making it **~20x faster** than `java.util.Scanner` for large inputs (e.g., $10^5$ integers).
 
 ---
 
 <div align="center">
-    <i>Happy Coding!</i>
+    <i>Built for Speed. Happy Coding!</i>
 </div>
