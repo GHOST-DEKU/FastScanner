@@ -1,81 +1,56 @@
 <div align="center">
 
-```
-  ___          _   ___
- | __|_ _ ___ | |_/ __| __ __ _ _ _  _ _  ___ _ _
- | _/ _` (_-< |  _\__ \/ _/ _` | ' \| ' \/ -_) '_|
- |_|\__,_/__/  \__|___/\__\__,_|_||_|_||_\___|_|
+# ⚡ FastScanner
 
-```
-
-### ✦ _A lightweight, high-performance input reader for Java._ ✦
+### A lightweight, high-performance input reader for Java.
 
 <br>
 
-[![](https://img.shields.io/badge/java-ffc8dd?style=for-the-badge&logo=openjdk&logoColor=1e1e1e)](https://java.com)
-[![](https://img.shields.io/badge/fast-a9def9?style=for-the-badge&logoColor=1e1e1e)](#)
-[![](https://img.shields.io/badge/MIT-d0f4de?style=for-the-badge&logoColor=1e1e1e)](LICENSE)
+[![Java](https://img.shields.io/badge/java-ffc8dd?style=for-the-badge&logo=openjdk&logoColor=1e1e1e)](https://java.com)
+[![Fast](https://img.shields.io/badge/fast-a9def9?style=for-the-badge&logoColor=1e1e1e)](#)
+[![MIT](https://img.shields.io/badge/MIT-d0f4de?style=for-the-badge&logoColor=1e1e1e)](LICENSE)
 
 </div>
 
 ---
 
-<br>
+## Overview
 
-## ✧ Overview
+`FastScanner` is a single-file Java utility for **competitive programming**. It uses `BufferedReader` internally, making it faster than `java.util.Scanner` for large inputs.
 
-`FastScanner` is a single-file Java utility designed for **competitive programming**. It uses `BufferedReader` internally, making it significantly faster than `java.util.Scanner` for large inputs.
+**Why use it?**
 
-<br>
-
-## ✧ Features
-
-|                     |                                      |
-| :------------------ | :----------------------------------- |
-| **⚡ Performance**  | ~20x faster than standard Scanner    |
-| **📦 Portable**     | Single file, no dependencies         |
-| **🧩 Familiar API** | `nextInt()`, `nextLong()`, `next()`  |
-| **🔒 Robust**       | Handles EOF, empty lines, edge cases |
-
-<br>
+- ⚡ ~20x faster than standard Scanner
+- 📦 Single file, no dependencies
+- 🧩 Familiar API: `nextInt()`, `nextLong()`, `next()`
+- 🔒 Robust: Handles EOF and edge cases
 
 ---
 
-<br>
-
-## ✧ Installation
+## Installation
 
 Download and run the installer for your system:
 
-<div align="center">
-
-|     | Installer                                                                                           | Action          |
+|     | Installer                                                                                           | How to Run      |
 | :-: | :-------------------------------------------------------------------------------------------------- | :-------------- |
 | 🪟  | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)         | Double-click    |
 | 🍎  | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command) | Double-click    |
 | 🐧  | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)       | `sh install.sh` |
 
-</div>
-
 <details>
 <summary><b>Manual Setup</b></summary>
-<br>
 
 ```bash
 git clone https://github.com/GHOST-DEKU/FastScanner.git
 ```
 
-Then copy the `FastScanner/` package into your project.
+Copy the `FastScanner/` folder into your project.
 
 </details>
 
-<br>
-
 ---
 
-<br>
-
-## ✧ Usage
+## Usage
 
 ```java
 import FastScanner.FastScanner;
@@ -94,13 +69,9 @@ public class Solution {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-## ✧ API
+## API
 
 | Return    | Method            | Description          |
 | :-------- | :---------------- | :------------------- |
@@ -112,13 +83,10 @@ public class Solution {
 | `int[]`   | `readIntArray(n)` | Read n integers      |
 | `boolean` | `hasNext()`       | Check for more input |
 
-<br>
-
 ---
 
 <div align="center">
-<br>
 
-_crafted with care by [GHOST-DEKU](https://github.com/GHOST-DEKU)_
+_Made by [GHOST-DEKU](https://github.com/GHOST-DEKU)_
 
 </div>
