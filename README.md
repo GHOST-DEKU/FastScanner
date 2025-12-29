@@ -1,89 +1,58 @@
 <div align="center">
 
-![Java](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+# FastScanner
 
-# Class `FastScanner`
+### The Speed You Need.
+
+[![Java](https://img.shields.io/badge/Java-100%25-orange?style=for-the-badge&logo=java)](https://java.com)
+[![Performance](https://img.shields.io/badge/Performance-Blazing-red?style=for-the-badge&logo=speedtest)](https://github.com/GHOST-DEKU/FastScanner)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+<br>
+
+**Competitive programming in Java shouldn't be slow.**  
+_Bypass `Scanner` overhead with a single, high-performance class._
+
+[⬇️ Download](#-installation) • [📖 Documentation](#-api-cheat-sheet) • [⚡ Benchmarks](#-benchmarks)
 
 </div>
 
-**Package**: `FastScanner`  
-**Extends**: `java.lang.Object`
-
 ---
 
-## Class Overview
+## ⚡ Why FastScanner?
 
-```java
-public class FastScanner
-extends Object
-```
+- **20x Faster**: Uses `BufferedReader` (8KB buffer) instead of standard Scanner.
+- **Drop-in Replacement**: Similar API (`nextInt`, `nextLong`) but optimized.
+- **Robust**: Handles messy inputs, empty lines, and huge files effortlessly.
+- **Zero Dependencies**: Just one file. No external libraries.
 
-A **high-performance input reader** designed for competitive programming (Codeforces, LeetCode, AtCoder). It wraps `java.io.BufferedReader` and `java.util.StringTokenizer` to provide significant speed improvements over `java.util.Scanner` while maintaining a simple, robust API.
+## 📦 Installation
 
-**Key Features:**
+We've made it effortless. Install it globally once, use it everywhere.
 
-- **Speed**: ~20x faster than standard Scanner for large inputs ($10^6+$ integers).
-- **Robustness**: Handles `EOF` and empty lines correctly.
-- **Convenience**: Built-in one-liners for reading arrays (`readIntArray`).
-
----
-
-## Constructor Summary
-
-| Constructor                    | Description                                                |
-| :----------------------------- | :--------------------------------------------------------- |
-| `FastScanner()`                | Creates a scanner reading from `System.in`.                |
-| `FastScanner(InputStream is)`  | Creates a scanner reading from the specified input stream. |
-| `FastScanner(String fileName)` | Creates a scanner reading from the specified file.         |
-
-## Method Summary
-
-| Return Type | Method                   | Description                                                     |
-| :---------- | :----------------------- | :-------------------------------------------------------------- |
-| `boolean`   | `hasNext()`              | Checks if there are more tokens available. Safe for EOF checks. |
-| `String`    | `next()`                 | Reads the next token from the input.                            |
-| `int`       | `nextInt()`              | Parses the next token as an `int`.                              |
-| `long`      | `nextLong()`             | Parses the next token as a `long`.                              |
-| `double`    | `nextDouble()`           | Parses the next token as a `double`.                            |
-| `char`      | `nextChar()`             | Reads the first character of the next token.                    |
-| `String`    | `nextLine()`             | Reads the remainder of the current line.                        |
-| `int[]`     | `readIntArray(int n)`    | Reads `n` integers into an array.                               |
-| `long[]`    | `readLongArray(int n)`   | Reads `n` longs into an array.                                  |
-| `double[]`  | `readDoubleArray(int n)` | Reads `n` doubles into an array.                                |
-
----
-
-## Installation
-
-<details open>
-<summary><b>1. One-Click Installation (Recommended)</b></summary>
-<br>
-
-|                                                   **Windows**                                                   |                                                        **macOS**                                                        |                                                    **Linux**                                                     |
-| :-------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-| [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>_(Double-click)_ | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command)<br>_(Double-click)_ | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>`sh install.sh` |
-
-_Installs to `~/JavaLibs` and configures `CLASSPATH`._
-
-</details>
+| **System**                                                                     | **One-Click Installer**                                                                                                                        |
+| :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://simpleicons.org/icons/windows.svg" height="15"/> **Windows** | 1. Download [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>2. **Double-click** to run.         |
+| <img src="https://simpleicons.org/icons/apple.svg" height="15"/> **macOS**     | 1. Download [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command)<br>2. **Double-click** to run. |
+| <img src="https://simpleicons.org/icons/linux.svg" height="15"/> **Linux**     | 1. Download [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>2. Run `sh install.sh`            |
 
 <details>
-<summary><b>2. Manual Import</b></summary>
+<summary><b>Or install manually...</b></summary>
 <br>
 
-1. Clone repo keys: `git clone https://github.com/GHOST-DEKU/FastScanner.git`
-2. Add `FastScanner/` folder to your project.
-3. Use `import FastScanner.FastScanner;`
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/GHOST-DEKU/FastScanner.git
+   ```
+2. Add the `FastScanner/` folder to your project.
 </details>
 
----
+## 🚀 Quick Usage
 
-## Usage Example
+Once installed, simply import it:
 
 ```java
-import FastScanner.FastScanner;
+import FastScanner.FastScanner; // Just import it!
 import java.io.*;
 import java.util.*;
 
@@ -91,23 +60,29 @@ public class Solution {
     public static void main(String[] args) {
         FastScanner fs = new FastScanner();
 
-        // 1. Safe EOF Check
-        if (!fs.hasNext()) return;
-
-        // 2. Read Primitives
+        // Use it just like Scanner, but faster
         int n = fs.nextInt();
+        int[] a = fs.readIntArray(n); // One-liner array input!
 
-        // 3. Read Arrays (One-Liner)
-        int[] a = fs.readIntArray(n);
-
-        Arrays.sort(a);
         System.out.println(Arrays.toString(a));
     }
 }
 ```
 
+## 📖 API Cheat Sheet
+
+| Type     | Method            | Description            |
+| :------- | :---------------- | :--------------------- |
+| `int`    | `nextInt()`       | Read next integer      |
+| `long`   | `nextLong()`      | Read next long         |
+| `double` | `nextDouble()`    | Read next double       |
+| `String` | `next()`          | Read next token (word) |
+| `String` | `nextLine()`      | Read rest of the line  |
+| `int[]`  | `readIntArray(n)` | Read array of size N   |
+| `bool`   | `hasNext()`       | safe `EOF` check       |
+
 ---
 
 <div align="center">
-<i>Authored by <a href="https://github.com/GHOST-DEKU">GHOST-DEKU</a></i>
+    <i>Happy Coding!</i>
 </div>
