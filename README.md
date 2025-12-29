@@ -12,7 +12,7 @@
 
 <br>
 
-> **" `java.util.Scanner` walked so `FastScanner` could run. "**
+> **" speed run your input. "**
 
 [get it](#-setup) • [how to](#-usage) • [features](#-features)
 
