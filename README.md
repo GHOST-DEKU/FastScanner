@@ -66,8 +66,8 @@ public class FastScanner {
 <tr>
 <td>
 
-1. Download [`install.ps1`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.ps1).
-2. Right-click → **Run with PowerShell**.
+1. Download [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat).
+2. **Double-click** to run.
 
 </td>
 <td>
