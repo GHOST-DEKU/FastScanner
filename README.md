@@ -24,12 +24,11 @@
 
 ## ✦ overview
 
-**FastScanner** is the upgrade your competitive programming setup needs.
-It replaces the default `Scanner` with something that actually handles large inputs without choking.
+**FastScanner** is a lightweight wrapper around `BufferedReader` and `StringTokenizer` designed to replace `java.util.Scanner` for competitive programming.
 
-- ✨ **Speed**: ~20x faster (uses `BufferedReader` internally).
-- 📦 **Tiny**: Single file. Zero dependencies.
-- 🧠 **Smart**: Handles messy inputs & EOF automatically.
+- ✨ **Faster**: Bypasses regex parsing used by `Scanner`.
+- 📦 **Zero External Deps**: Uses only standard Java libraries (`java.io`, `java.util`).
+- 🧠 **Smart**: Handles `EOF` and empty lines automatically.
 
 <br>
 
@@ -63,15 +62,17 @@ import FastScanner.FastScanner;
 
 public class Main {
     public static void main(String[] args) {
+        // 1. read from system.in
         FastScanner fs = new FastScanner();
 
-        // 1. read an integer (fast)
+        // 2. read primitives
         int n = fs.nextInt();
+        long k = fs.nextLong();
 
-        // 2. read a whole array (one line)
+        // 3. read arrays (one-liner)
         int[] arr = fs.readIntArray(n);
 
-        // 3. check for more input
+        // 4. check for more input
         if (fs.hasNext()) {
             System.out.println("we active ⚡");
         }
@@ -83,15 +84,17 @@ public class Main {
 
 ## ✦ cheat sheet
 
-| Method            | What it does                   |
-| :---------------- | :----------------------------- |
-| `nextInt()`       | Reads the next `int`           |
-| `nextLong()`      | Reads the next `long`          |
-| `nextDouble()`    | Reads the next `double`        |
-| `next()`          | Reads one word                 |
-| `nextLine()`      | Reads the whole line           |
-| `readIntArray(n)` | Fills an array of size `n`     |
-| `hasNext()`       | Returns `true` if input exists |
+| Method             | Returns   | Description                        |
+| :----------------- | :-------- | :--------------------------------- |
+| `nextInt()`        | `int`     | Reads the next integer             |
+| `nextLong()`       | `long`    | Reads the next long                |
+| `nextDouble()`     | `double`  | Reads the next double              |
+| `next()`           | `String`  | Reads the next token (word)        |
+| `nextChar()`       | `char`    | Reads the first char of next token |
+| `nextLine()`       | `String`  | Reads the remaining line           |
+| `readIntArray(n)`  | `int[]`   | Reads `n` integers                 |
+| `readLongArray(n)` | `long[]`  | Reads `n` longs                    |
+| `hasNext()`        | `boolean` | Checks for more tokens (EOF)       |
 
 <br>
 
