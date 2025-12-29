@@ -75,33 +75,36 @@ public class Solution {
 
 If you paste the code directly into your solution file or same directory without the folder, remove the `package FastScanner;` line from the top of `FastScanner.java`.
 
-### Option 3: Global Installation (Use anywhere)
+## 📦 Installation
 
-To use `import FastScanner.FastScanner;` in **any** Java file on your computer without copying files:
+### Option 3: One-Click Installation (App-like)
 
-**1. Create a Library Folder**
+Automatically installs to `~/JavaLibs` and configures your system environment.
 
-- Create a folder where you want to keep your libraries (e.g., `C:\JavaLibs` or `~/JavaLibs`).
-- Clone this repo into it so you have `C:\JavaLibs\FastScanner` containing the source.
-- Compile it: `javac FastScanner/FastScanner.java` inside that folder.
+**Windows:**
 
-**2. Add to CLASSPATH**
-Tell Java where to look for your global libraries.
+1. Download `install.ps1`.
+2. Right-click -> **Run with PowerShell** OR run:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File install.ps1
+   ```
 
-- **Windows (PowerShell)**:
+**Linux / macOS:**
 
-  ```powershell
-  [System.Environment]::SetEnvironmentVariable("CLASSPATH", ".;C:\JavaLibs", "User")
-  ```
+1. Download `install.sh`.
+2. Run:
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
 
-  _(Restart terminal after running)_
+### Option 4: Manual Global Installation
 
-- **Linux / MacOS** (.bashrc or .zshrc):
-  ```bash
-  export CLASSPATH=".:~/JavaLibs"
-  ```
+If you prefer doing it yourself:
 
-Now you can run `javac AnyFile.java` anywhere, and it will find `FastScanner`!
+1. **Create** a folder `C:\JavaLibs` (or `~/JavaLibs`).
+2. **Copy** the `FastScanner` folder from this repo into it.
+3. **Add** that folder to your `CLASSPATH` environment variable.
 
 ## ⚡ Performance Note
 
