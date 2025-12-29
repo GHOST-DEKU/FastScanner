@@ -75,6 +75,34 @@ public class Solution {
 
 If you paste the code directly into your solution file or same directory without the folder, remove the `package FastScanner;` line from the top of `FastScanner.java`.
 
+### Option 3: Global Installation (Use anywhere)
+
+To use `import FastScanner.FastScanner;` in **any** Java file on your computer without copying files:
+
+**1. Create a Library Folder**
+
+- Create a folder where you want to keep your libraries (e.g., `C:\JavaLibs` or `~/JavaLibs`).
+- Clone this repo into it so you have `C:\JavaLibs\FastScanner` containing the source.
+- Compile it: `javac FastScanner/FastScanner.java` inside that folder.
+
+**2. Add to CLASSPATH**
+Tell Java where to look for your global libraries.
+
+- **Windows (PowerShell)**:
+
+  ```powershell
+  [System.Environment]::SetEnvironmentVariable("CLASSPATH", ".;C:\JavaLibs", "User")
+  ```
+
+  _(Restart terminal after running)_
+
+- **Linux / MacOS** (.bashrc or .zshrc):
+  ```bash
+  export CLASSPATH=".:~/JavaLibs"
+  ```
+
+Now you can run `javac AnyFile.java` anywhere, and it will find `FastScanner`!
+
 ## ⚡ Performance Note
 
 > Uses `BufferedReader` with default buffer size (8KB), which is ~20x faster than `Scanner` for large datasets.
