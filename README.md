@@ -1,93 +1,124 @@
 <div align="center">
 
-# `FastScanner`
+```
+  ___          _   ___
+ | __|_ _ ___ | |_/ __| __ __ _ _ _  _ _  ___ _ _
+ | _/ _` (_-< |  _\__ \/ _/ _` | ' \| ' \/ -_) '_|
+ |_|\__,_/__/  \__|___/\__\__,_|_||_|_||_\___|_|
 
-### _Input Reading. Reimagined._
+```
 
-[![Java](https://img.shields.io/badge/Java-ffc8dd?style=for-the-badge&logo=java&logoColor=black)](https://java.com)
-[![Speed](https://img.shields.io/badge/Speed-a9def9?style=for-the-badge&logo=speedtest&logoColor=black)](https://github.com/GHOST-DEKU/FastScanner)
-[![License](https://img.shields.io/badge/License-b8b8ff?style=for-the-badge&logo=open-source-initiative&logoColor=black)](LICENSE)
+### ✦ _A lightweight, high-performance input reader for Java._ ✦
 
 <br>
 
-> **" Input Reading. Just Faster. "**
-
-[Installation](#-setup) • [Usage](#-code) • [API](#-methods)
+[![](https://img.shields.io/badge/java-ffc8dd?style=for-the-badge&logo=openjdk&logoColor=1e1e1e)](https://java.com)
+[![](https://img.shields.io/badge/fast-a9def9?style=for-the-badge&logoColor=1e1e1e)](#)
+[![](https://img.shields.io/badge/MIT-d0f4de?style=for-the-badge&logoColor=1e1e1e)](LICENSE)
 
 </div>
 
 ---
 
-## 🌸 The Vibe
+<br>
 
-**FastScanner** is a drop-in file that makes your Java input reading **20x faster**. It's built for competitive programming but designed to look and feel like a native part of your codebase.
+## ✧ Overview
 
-- ✨ **Simple**: No boilerplate. Just `fs.nextInt()`.
-- 🚀 **Fast**: Buffered reading meant for $10^6+$ inputs.
-- 🍬 **Sweet**: Handles edge cases so you don't have to.
+`FastScanner` is a single-file Java utility designed for **competitive programming**. It uses `BufferedReader` internally, making it significantly faster than `java.util.Scanner` for large inputs.
+
+<br>
+
+## ✧ Features
+
+|                     |                                      |
+| :------------------ | :----------------------------------- |
+| **⚡ Performance**  | ~20x faster than standard Scanner    |
+| **📦 Portable**     | Single file, no dependencies         |
+| **🧩 Familiar API** | `nextInt()`, `nextLong()`, `next()`  |
+| **🔒 Robust**       | Handles EOF, empty lines, edge cases |
+
+<br>
 
 ---
 
-## 📦 Setup
+<br>
 
-Choose your flavor.
+## ✧ Installation
 
-| **OS**      | **Quick Install**                                                                                                         |
-| :---------- | :------------------------------------------------------------------------------------------------------------------------ |
-| **Windows** | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat) <br> _(Double Click)_         |
-| **macOS**   | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command) <br> _(Double Click)_ |
-| **Linux**   | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh) <br> _(Terminal)_           |
+Download and run the installer for your system:
+
+<div align="center">
+
+|     | Installer                                                                                           | Action          |
+| :-: | :-------------------------------------------------------------------------------------------------- | :-------------- |
+| 🪟  | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)         | Double-click    |
+| 🍎  | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command) | Double-click    |
+| 🐧  | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)       | `sh install.sh` |
+
+</div>
 
 <details>
-<summary><b>Or do it the old school way...</b></summary>
+<summary><b>Manual Setup</b></summary>
 <br>
-1. Clone it: <code>git clone https://github.com/GHOST-DEKU/FastScanner.git</code><br>
-2. Drag the folder into your project.<br>
-3. Done.
+
+```bash
+git clone https://github.com/GHOST-DEKU/FastScanner.git
+```
+
+Then copy the `FastScanner/` package into your project.
+
 </details>
+
+<br>
 
 ---
 
-## 💻 Code
+<br>
+
+## ✧ Usage
 
 ```java
 import FastScanner.FastScanner;
+import java.util.*;
 
-public class Aesthetic {
+public class Solution {
     public static void main(String[] args) {
         FastScanner fs = new FastScanner();
 
-        // 1. Read an Integer
         int n = fs.nextInt();
-
-        // 2. Read an Array (One-Liner)
         int[] arr = fs.readIntArray(n);
 
-        // 3. Vibe Check
-        if (fs.hasNext()) {
-            System.out.println("We have more data! ✨");
-        }
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
 ```
 
+<br>
+
 ---
 
-## 🔮 Methods
+<br>
 
-| Type      | Syntax            | What it does                |
-| :-------- | :---------------- | :-------------------------- |
-| `int`     | `nextInt()`       | Grabs the next integer.     |
-| `long`    | `nextLong()`      | Grabs the next long.        |
-| `double`  | `nextDouble()`    | Grabs the next double.      |
-| `String`  | `next()`          | Grabs the next word.        |
-| `String`  | `nextLine()`      | Grabs the whole line.       |
-| `int[]`   | `readIntArray(n)` | Fills an array of size `n`. |
-| `boolean` | `hasNext()`       | Checks if input is empty.   |
+## ✧ API
+
+| Return    | Method            | Description          |
+| :-------- | :---------------- | :------------------- |
+| `int`     | `nextInt()`       | Read next integer    |
+| `long`    | `nextLong()`      | Read next long       |
+| `double`  | `nextDouble()`    | Read next double     |
+| `String`  | `next()`          | Read next token      |
+| `String`  | `nextLine()`      | Read entire line     |
+| `int[]`   | `readIntArray(n)` | Read n integers      |
+| `boolean` | `hasNext()`       | Check for more input |
+
+<br>
 
 ---
 
 <div align="center">
-    <br>
-    <i>made with 💜 by <a href="https://github.com/GHOST-DEKU">GHOST-DEKU</a></i>
+<br>
+
+_crafted with care by [GHOST-DEKU](https://github.com/GHOST-DEKU)_
+
 </div>
