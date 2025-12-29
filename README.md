@@ -66,13 +66,13 @@ public class FastScanner {
 <tr>
 <td>
 
-1. Download [`install.ps1`](install.ps1).
+1. Download [`install.ps1`](https://raw.githubusercontent.com/GHOST-DEKU/FastScanner/main/install.ps1).
 2. Right-click → **Run with PowerShell**.
 
 </td>
 <td>
 
-1. Download [`install.sh`](install.sh).
+1. Download [`install.sh`](https://raw.githubusercontent.com/GHOST-DEKU/FastScanner/main/install.sh).
 2. Run:
    ```bash
    chmod +x install.sh
