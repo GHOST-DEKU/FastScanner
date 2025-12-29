@@ -57,32 +57,9 @@ public class FastScanner {
 <summary><b>Option 1: One-Click Installation (Recommended)</b></summary>
 <br>
 
-<div align="center">
-<table>
-<tr>
-<td align="center"><b>Windows</b></td>
-<td align="center"><b>Linux / macOS</b></td>
-</tr>
-<tr>
-<td>
-
-1. Download [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat).
-2. **Double-click** to run.
-
-</td>
-<td>
-
-1. Download [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh).
-2. Run:
-   ```bash
-   chmod +x install.sh
-   ./install.sh
-   ```
-
-</td>
-</tr>
-</table>
-</div>
+|                                                              **Windows**                                                               |                                                          **Linux / macOS**                                                          |
+| :------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
+| 1. Download [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>2. **Double-click** to run. | 1. Download [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>2. Run `sh install.sh` |
 
 _Automatically installs to `~/JavaLibs` and configures your CLASSPATH._
 
