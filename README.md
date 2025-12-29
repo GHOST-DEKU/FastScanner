@@ -46,9 +46,13 @@ public class FastScanner {
 
 ## 🚀 Usage Example
 
-Simply copy `FastScanner.java` into your project source.
+### Option 1: As a Library (Recommended)
+
+1. Clone/Download this repo into a folder named `FastScanner` inside your project.
+2. Import it in your code:
 
 ```java
+import FastScanner.FastScanner; // Import the class
 import java.io.*;
 import java.util.*;
 
@@ -61,14 +65,15 @@ public class Solution {
         int n = fs.nextInt();
         int[] a = fs.readIntArray(n); // One-line array input!
 
-        // Logic...
         Arrays.sort(a);
-
-        // Output
         System.out.println(Arrays.toString(a));
     }
 }
 ```
+
+### Option 2: Single File
+
+If you paste the code directly into your solution file or same directory without the folder, remove the `package FastScanner;` line from the top of `FastScanner.java`.
 
 ## ⚡ Performance Note
 
