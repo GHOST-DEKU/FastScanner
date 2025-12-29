@@ -10,7 +10,7 @@
 
 <br>
 
-> **" Because `java.util.Scanner` is just too slow. "**
+> **" Input Reading. Just Faster. "**
 
 [Installation](#-setup) • [Usage](#-code) • [API](#-methods)
 
