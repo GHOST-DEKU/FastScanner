@@ -10,7 +10,7 @@
 
 <br>
 
-> **" `java.util.Scanner` is straight up cringe. Use this instead. "**
+> **" `java.util.Scanner` walked so `FastScanner` could run. "**
 
 [Get It](#-setup) • [The Code](#-the-drip) • [Cheat Sheet](#-cheat-sheet)
 
