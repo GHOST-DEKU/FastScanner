@@ -57,9 +57,9 @@ public class FastScanner {
 <summary><b>Option 1: One-Click Installation (Recommended)</b></summary>
 <br>
 
-|                                                              **Windows**                                                               |                                                          **Linux / macOS**                                                          |
-| :------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
-| 1. Download [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>2. **Double-click** to run. | 1. Download [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>2. Run `sh install.sh` |
+|                                                   **Windows**                                                   |                                                        **macOS**                                                        |                                                    **Linux**                                                     |
+| :-------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
+| [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>_(Double-click)_ | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command)<br>_(Double-click)_ | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>`sh install.sh` |
 
 _Automatically installs to `~/JavaLibs` and configures your CLASSPATH._
 
