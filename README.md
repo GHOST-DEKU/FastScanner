@@ -1,95 +1,103 @@
 <div align="center">
 
-# `FastScanner`
+# `fastscanner`
 
-### _Java I/O but it actually slaps._
+### ✦ _java i/o. just faster._ ✦
 
-[![Java](https://img.shields.io/badge/Java-ffc8dd?style=for-the-badge&logo=java&logoColor=black)](https://java.com)
-[![Speed](https://img.shields.io/badge/Vibe-Immaculate-a9def9?style=for-the-badge&logo=sparkles&logoColor=black)](#)
-[![License](https://img.shields.io/badge/License-b8b8ff?style=for-the-badge&logo=open-source-initiative&logoColor=black)](LICENSE)
+<br>
+
+[![Java](https://img.shields.io/badge/java-ffc8dd?style=flat-square&logo=java&logoColor=black)](https://java.com)
+[![Speed](https://img.shields.io/badge/status-fast_af-a9def9?style=flat-square&logo=speedtest&logoColor=black)](#)
+[![License](https://img.shields.io/badge/license-MIT-cdb4db?style=flat-square&logo=open-source-initiative&logoColor=black)](LICENSE)
 
 <br>
 
 > **" `java.util.Scanner` walked so `FastScanner` could run. "**
 
-[Get It](#-setup) • [The Code](#-the-drip) • [Cheat Sheet](#-cheat-sheet)
+[get it](#-setup) • [how to](#-usage) • [features](#-features)
 
 </div>
 
 ---
 
-## 💅 The Tea
+<br>
 
-Look, standard Java `Scanner` is slow. Like, painfully slow. When you're grinding LeetCode or Codeforces, you can't be getting TLE just because Java decided to take a nap.
+## ✦ overview
 
-**FastScanner** is that girl.
+**FastScanner** is the upgrade your competitive programming setup needs.
+It replaces the default `Scanner` with something that actually handles large inputs without choking.
 
-- **Speed?** ✨ Main Character Energy. 20x faster than Scanner.
-- **Complexity?** 📉 Zero. It's just one file, bestie.
-- **Vibe?** 🍬 Immaculate.
+- ✨ **Speed**: ~20x faster (uses `BufferedReader` internally).
+- 📦 **Tiny**: Single file. Zero dependencies.
+- 🧠 **Smart**: Handles messy inputs & EOF automatically.
 
----
+<br>
 
-## 📦 Setup
+## ✦ setup
 
-Don't overcomplicate it. Just click.
+click. install. done.
 
-| **OS**      | **Lazy Install**                                                                                                          |
-| :---------- | :------------------------------------------------------------------------------------------------------------------------ |
-| **Windows** | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat) <br> _(Double Click & Slay)_  |
-| **macOS**   | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command) <br> _(Double Click)_ |
-| **Linux**   | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh) <br> _(Terminal)_           |
+|     | **OS**      | **Installer**                                                                                                           |
+| :-: | :---------- | :---------------------------------------------------------------------------------------------------------------------- |
+| 🪟  | **Windows** | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>_(Double-click)_         |
+| 🍎  | **macOS**   | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command)<br>_(Double-click)_ |
+| 🐧  | **Linux**   | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>_(Terminal)_           |
 
 <details>
-<summary><b>Manual Setup (For the control freaks)</b></summary>
+<summary><b>manual install</b></summary>
 <br>
-1. Clone it: <code>git clone https://github.com/GHOST-DEKU/FastScanner.git</code><br>
-2. Yeet the <code>FastScanner/</code> folder into your project.<br>
-3. Import and go.
+
+1. `git clone https://github.com/GHOST-DEKU/FastScanner.git`
+2. Copy the `FastScanner/` folder to your project.
+3. You're set.
 </details>
 
----
+<br>
 
-## 💻 The Drip
+## ✦ usage
+
+Import it. Use it like normal.
 
 ```java
 import FastScanner.FastScanner;
 
-public class MainCharacter {
+public class Main {
     public static void main(String[] args) {
         FastScanner fs = new FastScanner();
 
-        // Literal one-liner integer input
+        // 1. read an integer (fast)
         int n = fs.nextInt();
 
-        // Reading an array? Easy clap.
+        // 2. read a whole array (one line)
         int[] arr = fs.readIntArray(n);
 
-        // Check if we still have content or if we ghosted
+        // 3. check for more input
         if (fs.hasNext()) {
-            System.out.println("We stay winning 🏆");
+            System.out.println("we active ⚡");
         }
     }
 }
 ```
 
----
+<br>
 
-## 🔮 Cheat Sheet
+## ✦ cheat sheet
 
-| Type      | Syntax            | What's the tea?                    |
-| :-------- | :---------------- | :--------------------------------- |
-| `int`     | `nextInt()`       | Yoink the next integer.            |
-| `long`    | `nextLong()`      | Big number energy.                 |
-| `double`  | `nextDouble()`    | Decimals? We got u.                |
-| `String`  | `next()`          | Reads one word. No cap.            |
-| `String`  | `nextLine()`      | Reads the whole sentence.          |
-| `int[]`   | `readIntArray(n)` | Fills a whole array. Satisfying.   |
-| `boolean` | `hasNext()`       | Returns true if not ghosted (EOF). |
+| Method            | What it does                   |
+| :---------------- | :----------------------------- |
+| `nextInt()`       | Reads the next `int`           |
+| `nextLong()`      | Reads the next `long`          |
+| `nextDouble()`    | Reads the next `double`        |
+| `next()`          | Reads one word                 |
+| `nextLine()`      | Reads the whole line           |
+| `readIntArray(n)` | Fills an array of size `n`     |
+| `hasNext()`       | Returns `true` if input exists |
+
+<br>
 
 ---
 
 <div align="center">
     <br>
-    <i>coded with ☕ & 😭 by <a href="https://github.com/GHOST-DEKU">GHOST-DEKU</a></i>
+    <i>crafted by <a href="https://github.com/GHOST-DEKU">GHOST-DEKU</a></i>
 </div>
