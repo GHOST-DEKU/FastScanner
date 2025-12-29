@@ -40,7 +40,7 @@ click. install. done.
 | :-: | :---------- | :---------------------------------------------------------------------------------------------------------------------- |
 | 🪟  | **Windows** | [`setup.bat`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.bat)<br>_(Double-click)_         |
 | 🍎  | **macOS**   | [`setup.command`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/setup.command)<br>_(Double-click)_ |
-| 🐧  | **Linux**   | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>_(Terminal)_           |
+| 🐧  | **Linux**   | [`install.sh`](https://github.com/GHOST-DEKU/FastScanner/releases/download/v1.0.0/install.sh)<br>`sh install.sh`        |
 
 <details>
 <summary><b>manual install</b></summary>
